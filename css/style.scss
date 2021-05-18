@@ -587,6 +587,26 @@ $transforms:  translate(0,-$offset),
   height: auto;
   min-height: 125vh;
 }
+.services_ttl {
+  text-align: center;
+  padding: 30px;
+  color: $blue2;
+  font-size: 50pt;
+  letter-spacing: 4px;
+  text-shadow: 
+      2px  2px 0px #333,
+      -2px  2px 0px #333,
+      2px -2px 0px #333,
+      -2px -2px 0px #333,
+      2px  0px 0px #333,
+      0px  2px 0px #333,
+      -2px  0px 0px #333,
+      0px -2px 0px #333;        /* 文字の影 */
+}
+
+
+
+
 // .services-heading {
 //   color: #333;
 //   text-align: center;
