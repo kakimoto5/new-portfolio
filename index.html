@@ -2,176 +2,260 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
+  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HP-create</title>
-  <!-- ページ説明 -->
-  <meta name="description" content="HP-create　フリーランスのweb制作 柿本剛です。ホームページ制作をしています。">
+  <title>柿本HP制作</title>
+    <!-- ページ説明 -->
+  <meta name=”description” content=”ビジネスのプラスになるウェブサイトを制作します。フリーランスウェブデザイナーの柿本剛です。制作会社に頼むよりフリーランスに注文するメリット、制作実績、私の理念、プロフィールなどが掲載されています。”>
   <!-- ファビコン -->
-  <link rel="shortcut icon" href="ファイル名.ico">
-  <!-- 検索に出すか、リンク辿らせるか -->
-  <!-- <meta name="robots" content="noindex,nofollow"> -->
-  <!-- 前後のページ -->
-  <link rel="prev" href="前のページURL">
-  <link rel="next" href="次のページURL">
-  
-  <!-- css -->
+  <link rel="shortcut icon" href="img/g.ico">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
-  <link rel="stylesheet" href="css/style.min.css">
-  <link rel="stylesheet" href="flipster/dist/jquery.flipster.min.css">
-  <link rel="sytlesheet" href="full/fullpage.css">
-
-  <!-- js -->
-  <script src="script.js" defer></script>
-  <!-- flip -->
-  <script src="flipster/src/jquery.flipster.js" defer></script>
-  <!-- para -->
-  <script src="https://code.jquery.com/jquery-latest.min.js"></script>
-  <script src="para/hex.js"></script>
-  
-  <style>
-  .demo {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    bottom: 0px;
-    right: 0px;
-    z-index: -1;
-  }
-  </style>
-
-<!-- full -->
-<script src="full/easing.min.js" defer></script>
-<script src="full/fullpage.js" defer></script>
-<script src="full/scrolloverflow.min.js" defer></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.min.css" integrity="sha256-+dIh4jG2jQTHZwW81yUo8h6tzXWcNumyNL5XPZbwp1E=" crossorigin="anonymous" />
-
-
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="style.min.css">
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js" defer></script>
+  <script src="js/particles.min.js" defer></script>
+  <script src="js/setting.js" defer></script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+    $(function(){
+  $('a[href^=#]').click(function(){
+      var speed = 9000;
+      var href= $(this).attr("href");
+      var target = $(href == "#" || href == ".profile-right" ? 'html' : href);
+      var position = target.offset().top;
+      $("html, body").animate({scrollTop:profile-right}, speed, "swing");
+      return false;
+  });
+});
+  </script>
 </head>
-<body class="index">
-  <div class="demo">
-  </div>
+<body>
   <header>
     <div class="header-container">
-      <div class="header-title">
+      <section class="header-title">
         <a href="index.html">
-          <p class="title-name">HP-create</p>
-          <p class="title-sub">ホームページ制作</p>
+          <p class="title-name">GO KAKIMOTO</p>
+          <p class="title-sub">FREELANCE WEB DESIGNER</p>
         </a>
-      </div>
-      <ul class="nav" >
-        <li class="b"><a href="#firstPage" class="nav_btn">Top</a></li>
-        <li class="b"><a href="#secondPage" class="nav_btn">work</a></li>
-        <li class="b"><a href="#3rdPage" class="nav_btn">Price</a></li>
-        <li class="b"><a href="#4thPage" class="nav_btn">Contact</a></li>
-      </ul>
+      </section>
+        <nav id="js-spnav" class="spnav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </nav>
+        <nav class="header-nav" >
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="newworks.html">制作事例</a></li>
+          <li><a href="flow.html">ご依頼の流れ</a></li>
+          <li><a href="newprice.html">価格</a></li>
+          <!-- <li><a href="#bottom" id="top">プロフィール</a></li> -->
+          <li><a href="question.html" target="_blank">お問合せ</a></li>
+        </nav>
     </div>
   </header>
+  <main class="main-index">
+    <section class="main-contents">
+      <h2 class="img-text">もっと手軽に<br>ホームページを</h2>
+      <div id="hoge"></div>
+    </section>
 
-<main>
-  <div id="fullpage">
-    <div class="section" data-anchor="firstPage">
-      <div class="page1">
-        <div class="page1_container">
-          <h1 class="name">KAKIMOTO<br>GO</h1>
-          <div class="sub_name">web designer</div>
-          <div id="tenth" class="buttonBox">
-            <a href="about.html" class="btn-square btn1">
-              <span>C</span>
-              <span>l</span>
-              <span>i</span>
-              <span>c</span>
-              <span>k</span>
-              <span> </span>
-              <span>T</span>
-              <span>h</span>
-              <span>i</span>
-              <span>s</span>
-            </a>
-          </div>
-        </div>
-      </div>
-      <a href="#secondPage" class="down">Scroll Down</a>
-    </div>
-    <div class="section" data-anchor="secondPage">
-      <div class="page1">
-        <div class="page1_container">
-          <h2 class="name">work</h2>
-          <div class="sub_name sub_name">Homepage collection</div>
-          <div id="tenth" class="buttonBox btn2">
-            <a href="work.html" class="btn-square">
-              <span>C</span>
-              <span>l</span>
-              <span>i</span>
-              <span>c</span>
-              <span>k</span>
-              <span> </span>
-              <span>T</span>
-              <span>h</span>
-              <span>i</span>
-              <span>s</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section" data-anchor="3rdPage">
-      <div class="page1">
-        <div class="page1_container">
-          <h3 class="name">Price</h3>
-          <div class="sub_name"></div>
-          <div id="tenth" class="buttonBox">
-            <a href="price.html" class="btn-square btn1">
-              <span>C</span>
-              <span>l</span>
-              <span>i</span>
-              <span>c</span>
-              <span>k</span>
-              <span> </span>
-              <span>T</span>
-              <span>h</span>
-              <span>i</span>
-              <span>s</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section" data-anchor="4thPage">
-      <div class="page1">
-        <div class="page1_container">
-          <h4 class="name">Contact</h4>
-          <div class="sub_name"></div>
-          <div id="tenth" class="buttonBox">
-            <a href="about.html" class="btn-square btn1">
-              <span>C</span>
-              <span>l</span>
-              <span>i</span>
-              <span>c</span>
-              <span>k</span>
-              <span> </span>
-              <span>T</span>
-              <span>h</span>
-              <span>i</span>
-              <span>s</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+    <div class="main3">
+      <div class="ttl">
+        <h3 class="ttl-text">時代の移り変わり</h3>
+      </din>
+    </div>  
 
+    <section class="ttl-container sp-ttl-container">
+      <li class="list-box">
+        <p class="icon"><img src="img/01.png" alt=""></p>
+        <h4 class="sub-ttl">検索方法はSNSに</h4>
+        <p class="sub-contents">今は調べ物をする際にインターネットで検索するのではなく<br>最新情報が画像で見て分かるSNSで検索をする時代に変わりました。</p> 
+      </li>
+      <li class="list-box">
+        <p class="icon"><img src="img/02.png" alt=""></p>
+        <h4 class="sub-ttl">SNSのホームページ</h4>
+        <p class="sub-contents">Instagramで調べ、気になるものを見つけ画像で見る。
+          もっと気になる場合はURLをクリック
+          </p> 
+      </li>
+      <li class="list-box">
+        <p class="icon"><img src="img/03.png" alt=""></p>
+        <h4 class="sub-ttl">個人でもHPはいるのか？</h4>
+        <p class="sub-contents">よくあるリンク集は簡易的すぎる<br>
+          HPに行くと思ってクリックしてみたらLINEに変わり友達追加の画面<br><br>
+        自分が顧客目線に立ってみれば見やすくオシャレなHPがあると安心すると思います。</p> 
+      </li>
+    </section>
 
-
-</main>
+    <div class="production">
+      <div class="ttl">
+        <h5 class="ttl-text">制作実績</h5>
+      </din>
+    </div>
     
+    <article class="sample sample03">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><a href="newworks.html"><img src="img/sit01.png"></div></a>
+          <div class="swiper-slide"><a href="newworks.html"><img src="img/sit02.png"></div></a>
+          <div class="swiper-slide"><a href="newworks.html"><img src="img/sit03.png"></div></a>
+          <div class="swiper-slide"><a href="newworks.html"><img src="img/sit04.png"></div></a>
+          <div class="swiper-slide"><a href="newworks.html"><img src="img/sit05.png"></div></a>
+          <div class="swiper-slide"><a href="newworks.html"><img src="img/sit06.png"></div></a>
+        </div>
+          
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    
+        <div class="swiper-pagination"></div>
+      </div>
+    </article>
+    
+    <section class="promise">
+      <div class="ttl">
+        <h6 class="ttl-text">お約束</h6>
+      </din>
+    </section>
 
+    <!-- 画像左1 -->
+    <section class="promise-xxx">
+      <article class="promise-area">
+        <div class="promise-container">
+          <div class="promise-img">
+            <img class="img-left" src="img/m01.png" alt="">
+          </div>
+          <div class="promise-text-container">
+            <p class="promise-number">1</p>
+            <p class="promise-ttl">納期は必ず守ります</p>
+            <p class="promise-sub-ttl">Time is Money</p>
+            <p class="promise-text">時間に対する厳しさには、人一倍厳しい自信があります。
+              もしも万が一の場合、納期に間に合わないと判断した場合は、
+              理由など丁寧に説明します。
+              お客様に安心して進行度を確信していただくために、ご要望があればGoogleのスプレッドシートなどを用いて、進行度をシェアする事をお約束します。</p>
+          </div>
+        </div>
+      </article>
+      <!-- 画像右2 -->
+      <article class="promise-area-right">
+        <div class="promise-container-right">
+          <div class="promise-text-container-right">
+            <p class="promise-number">2</p>
+            <p class="promise-ttl">先を見据えたWeb制作を致します</p>
+            <p class="promise-sub-ttl">Future</p>
+            <p class="promise-text">ただHPを作って、見た目さえよければ良いのではなく、
+              必ずヒアリングシートを用いて、お客様がどのような目的でWeb制作を依頼しているのか意図を汲み取り、その意図に合わせ会社に最適な制作をします。</p>
+          </div>
+          <div class="promise-img">
+            <img class="img-right" src="img/2.jpg" alt="">
+          </div>
+        </div>
+      </article>
+      <!-- 画像左3 -->
+      <article class="promise-area">
+        <div class="promise-container">
+          <div class="promise-img">
+            <img class="img-left" src="img/m02.png" alt="">
+          </div>
+          <div class="promise-text-container">
+            <p class="promise-number">3</p>
+            <p class="promise-ttl">入念なチェック、テストを行い納品</p>
+            <p class="promise-sub-ttl">Test&Check</p>
+            <p class="promise-text">・IE11でレイアウト崩れが起きる<br>
+              ・スマホ表示でレイアウトが崩れる<br>
+              ・ページ読み込み速度がやけに遅い<br>
+              ・画像が正しく表示されない<br>
+              納品後このような事が起こらないように、
+              入念なチェック、テストを行い納品します。</p>
+          </div>
+        </div>
+      </article>
+      <!-- 画像右4 -->
+      <article class="promise-area-right">
+        <div class="promise-container-right">
+          <div class="promise-text-container-right">
+            <p class="promise-number promise-number-right">4</p>
+            <p class="promise-ttl">顧客ファーストで対応します</p>
+            <p class="promise-sub-ttl">Customer First</p>
+            <p class="promise-text">常にお客様第一に考え、難しい用語などは使わず、安心してやり取りできるように致します。ITの知識がないお客様でも分かりやすく説明させていただきます。「当たり前の事を当たり前に」
+            </p>
+          </div>
+          <div class="promise-img">
+            <img class="img-right" src="img/4.jpg" alt="">
+          </div>
+        </div>
+      </article>
+      <!-- 画像左5 -->
+      <article class="promise-area">
+        <div class="promise-container">
+          <div class="promise-img">
+            <img class="img-left" src="img/f02.png" alt="">
+          </div>
+          <div class="promise-text-container">
+            <p class="promise-number">5</p>
+            <p class="promise-ttl">私からも提案していきます</p>
+            <p class="promise-sub-ttl">Suggestion</p>
+            <p class="promise-text">「もっとこうした方が良くなるのではないか！」<br>
+              「このデザインの方がターゲット層に好まれる」etc,,,<br>
+              お客様にメリットのあることはどんどん提案していきます！</p>
+          </div>
+        </div>
+      </article>
+    </section>
+    <section id="bottom" class="profile-ttl">
+      <div class="ttl">
+        <h6 class="ttl-text">プロフィール</h6>
+      </div>
+    </section>
+    <section class="profile-area">
+      <div class="profile-container">
+        <div class="profile-left">
+          <img class="photo" src="img/sns00.png" alt="">
+          <div  class="img-container">
+            <a href=""target=”_blank”><img class="sns-icon" src="img/sns1.png" alt=""></a>
+            <a href="https://line.me/ti/p/cCE15-Z-Com"target=”_blank”><img class="sns-icon" src="img/sns02.png" alt=""></a>
+            <a href="https://www.instagram.com/kaki127"target=”_blank”><img class="sns-icon" src="img/sns03.png" alt=""></a>
+            <a href="mailto:gogogo1272icloud"target=”_blank”><img class="sns-icon" src="img/sns04.png" alt=""></a>
+          </div>
+        </div>
+        <div href="#top" class="profile-right">
+          <div class="profile-name">kakimoto gou</div>
+          <div class="profile-name2">柿本  剛</div>
 
-<!-- flipster -->
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script> -->
-
-<!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/fullpage.min.js" integrity="sha256-caNcSA0LvOCX90PTuEbwl+V09xPMca13CJUasl+VCtk=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/vendors/easings.min.js" integrity="sha256-se1LVUgnBaGcZvC0A7xkl3Lea7CRU5BQqUQT8ZvdH4A=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.8/vendors/scrolloverflow.min.js" integrity="sha256-bmjt2PwiRoDWtD/Zbj9lJdkCvFIzYY7W/6q3ZcVjlu8=" crossorigin="anonymous"></script> -->
+          <div class="profile1">フリーランスWebエンジニア兼ディレクター</div>
+          <div class="profile-skill">
+            スキル<br>
+            HTML、CSS、Sass、レスポンシブ化、WordPress<br>
+            javascript、<br>ECショップ運用代行(BASE,Shopify)
+          </div>
+        </div>
+      </div>
+  </section>
+  </main>
+  <footer>
+    <div class="footer-container">
+      <div id="js-scroll-top" class="scroll-top">TOP</div>
+      <nav class="header-nav" >
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="newworks.html">制作実績</a></li>
+        <li><a href="flow.html">ご依頼の流れ</a></li>
+        <li><a href="newprice.html">価格</a></li>
+        <!-- <li><a href="">プロフィール</a></li> -->
+        <li><a href="question.html" target="_blank">お問合せ</a></li>
+      </nav>
+    </div>
+    <small>
+      <div class="coopyright">
+        &copy; 2021 kakimoto inc.
+      </div>
+    </small>
+  </footer>
+  <!-- ハンバーガーメニュー -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script>
+  $(function() {
+    $("#js-spnav").click(function() {
+      $('.header-nav').toggleClass("show");
+    });
+  });
+  </script>
 </body>
 </html>
